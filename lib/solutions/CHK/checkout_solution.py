@@ -47,10 +47,15 @@ class CheckoutSolution:
         # Loop over all offers available
         for offer in self.offers:
 
-            # Variables for readability
-            item_freq = all_items_freq[item]
-            offer_freq = (self.offers[item])[0]
-            offer_val = (self.offers[item])[1]
+            # What item does the offer apply to and how many do we have
+            offer_item = offer["offer_item"]
+            offer_item_freq = all_items_freq[offer_item]
+
+            # 
+            num_offer_item = offer["num_offer_item"]
+            reward_item_freq = offer["reward_item_freq"]
+            num_reward_item = offer["num_reward_item"]
+            reward_offer_price = offer["reward_offer_price"]
 
             # If there are enough items to apply an offer
             if item_freq >= offer_freq:
@@ -72,6 +77,7 @@ class CheckoutSolution:
 
         return total
         
+
 
 
 
