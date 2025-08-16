@@ -41,10 +41,10 @@ class CheckoutSolution:
         "U": 40,
         "V": 50,
         "W": 20,
-        "X": 90,
+        "X": 17,
 
-        "Y": 10,
-        "Z": 50
+        "Y": 20,
+        "Z": 21
     }
 
     offers = [
@@ -59,7 +59,7 @@ class CheckoutSolution:
         make_offer_dict("H", 10, "H", 10, 80),
         make_offer_dict("H", 5, "H", 5, 45),
 
-        make_offer_dict("K", 2, "K", 2, 150),
+        make_offer_dict("K", 2, "K", 2, 120),
 
         make_offer_dict("N", 3, "M", 1, 0),
 
@@ -134,6 +134,7 @@ class CheckoutSolution:
 
         return total
         
+
 
 
 
