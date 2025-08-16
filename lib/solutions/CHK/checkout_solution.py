@@ -117,11 +117,16 @@ class CheckoutSolution:
                 # Find the number of offers that can be applied to the total
                 num_offers_used = min(num_offers_available, num_offers_possible)
 
-                # Subtract the offer reward items off the main count
-                all_items_freq[reward_item] -= num_offers_used * num_reward_item
+                # Loop over each of the items in the reward
+                for i in range(len(reward_item)):
 
-                # Ensure it doesn't drop below 0
-                all_items_freq[reward_item] = max(all_items_freq[reward_item], 0)
+                    item = reward_item[i]
+
+                    # Subtract the offer reward items off the main count
+                    all_items_freq[item] -= num_offers_used * num_reward_item[i]
+
+                    # Ensure it doesn't drop below 0
+                    all_items_freq[item] = max(all_items_freq[item], 0)
 
                 # Add offer price to the running total
                 total += num_offers_used * reward_offer_price
@@ -134,6 +139,7 @@ class CheckoutSolution:
 
         return total
         
+
 
 
 
