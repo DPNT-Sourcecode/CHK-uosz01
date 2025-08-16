@@ -132,6 +132,3 @@ class TestCheckout():
 
 
 
-
-
-
