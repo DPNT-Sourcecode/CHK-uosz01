@@ -1,4 +1,5 @@
 from collections import Counter
+from itertools import combinations_with_replacement
 
 def make_offer_dict(offer_item, num_offer_item, reward_item, num_reward_item, reward_offer_price):
 
@@ -88,6 +89,12 @@ class CheckoutSolution:
         make_offer_dict(["T", "X", "Y"], [1, 1, 1], ["T", "X", "Y"], [1, 1, 1], 45),
     ] 
 
+    group_discount_items = ["Z", "S", "T", "Y", "X"]
+    combos = list(combinations_with_replacement(group_discount_items, 3))
+
+    print(combos)
+
+
     # skus = unicode string
     def checkout(self, skus):
 
@@ -153,6 +160,7 @@ class CheckoutSolution:
 
         return total
         
+
 
 
 
