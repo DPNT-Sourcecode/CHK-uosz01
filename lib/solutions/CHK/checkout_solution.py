@@ -11,6 +11,7 @@ class CheckoutSolution:
     }
 
     offers = {
+        "A": (5, 200),
         "A": (3, 130),
         "B": (2, 45)
     }    
@@ -58,6 +59,7 @@ class CheckoutSolution:
 
         return total
         
+
 
 
 
