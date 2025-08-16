@@ -63,17 +63,23 @@ class CheckoutSolution:
             # If there are enough items to apply an offer
             if offer_item_freq >= num_offer_item:
 
-                # Calculate how many times the offer can be used
-                num_offers_used = reward_item_freq // num_reward_item
+                # Calculate how many offers are available
+                num_offers_available = offer_item_freq // num_offer_item
+
+                # Calculate how many times the offer can be used on reward item
+                num_offers_possible = reward_item_freq // num_reward_item
+
+                # Find the number of offers that can be applied to the total
+                num_offers_used = min(num_offers_available, num_offers_possible)
 
                 # Subtract the offer reward items off the main count
-                all_items_freq[reward_item] -= num_offers * num_reward_item
+                all_items_freq[reward_item] -= num_offers_used * num_reward_item
 
                 # Ensure it doesn't drop below 0
                 all_items_freq[reward_item] = max(all_items_freq[reward_item], 0)
 
                 # Add offer price to the running total
-                total += num_offers * reward_offer_price
+                total += num_offers_used * reward_offer_price
 
         # Multiply the frequency of each item by its price
         items_cost = {k: all_items_freq[k] * self.prices[k] for k in all_items_freq.keys()}
@@ -83,14 +89,6 @@ class CheckoutSolution:
 
         return total
         
-
-
-
-
-
-
-
-
 
 
 
