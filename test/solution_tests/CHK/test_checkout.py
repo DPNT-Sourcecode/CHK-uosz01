@@ -14,4 +14,10 @@ class TestCheckout():
         assert CheckoutSolution().checkout("AAA") == 130
         assert CheckoutSolution().checkout("BB") == 45
 
+    def test_checkout_invalid(self):
+
+        assert CheckoutSolution().checkout("E") == -1
+        assert CheckoutSolution().checkout("AAE") == -1
+
+
 
