@@ -16,7 +16,7 @@ class TestCheckout():
         assert CheckoutSolution().checkout("H") == 10
         assert CheckoutSolution().checkout("I") == 35
         assert CheckoutSolution().checkout("J") == 60
-        assert CheckoutSolution().checkout("K") == 70  ----------
+        assert CheckoutSolution().checkout("K") == 70
         assert CheckoutSolution().checkout("L") == 90
 
         assert CheckoutSolution().checkout("M") == 15
@@ -26,15 +26,15 @@ class TestCheckout():
         assert CheckoutSolution().checkout("Q") == 30
         assert CheckoutSolution().checkout("R") == 50
 
-        assert CheckoutSolution().checkout("S") == 20 ----------
+        assert CheckoutSolution().checkout("S") == 20
         assert CheckoutSolution().checkout("T") == 20
         assert CheckoutSolution().checkout("U") == 40
         assert CheckoutSolution().checkout("V") == 50
         assert CheckoutSolution().checkout("W") == 20
-        assert CheckoutSolution().checkout("X") == 17 -----------
+        assert CheckoutSolution().checkout("X") == 17
 
-        assert CheckoutSolution().checkout("Y") == 20 --------
-        assert CheckoutSolution().checkout("Z") == 21 -------
+        assert CheckoutSolution().checkout("Y") == 20
+        assert CheckoutSolution().checkout("Z") == 21
 
 
     def test_checkout_special(self):
@@ -61,7 +61,7 @@ class TestCheckout():
         assert CheckoutSolution().checkout("HHHHHHHHH") == 85
         assert CheckoutSolution().checkout("HHHHHHHHHH") == 80
 
-        assert CheckoutSolution().checkout("KK") == 150
+        assert CheckoutSolution().checkout("KK") == 120
 
         assert CheckoutSolution().checkout("NNN") == 120
         assert CheckoutSolution().checkout("NNNM") == 120 + 0
@@ -95,6 +95,14 @@ class TestCheckout():
         assert CheckoutSolution().checkout("VVVVVV") == 130 + 130
 
 
+    def test_checkout_group_offer(self):
+
+        assert CheckoutSolution().checkout("z") == -1
+        assert CheckoutSolution().checkout("%") == -1
+        assert CheckoutSolution().checkout("AAg") == -1
+        assert CheckoutSolution().checkout("a") == -1
+        assert CheckoutSolution().checkout("ABCa") == -1
+
 
     def test_checkout_invalid(self):
 
@@ -103,6 +111,7 @@ class TestCheckout():
         assert CheckoutSolution().checkout("AAg") == -1
         assert CheckoutSolution().checkout("a") == -1
         assert CheckoutSolution().checkout("ABCa") == -1
+
 
     def test_checkout_combination(self):
 
@@ -121,7 +130,8 @@ class TestCheckout():
 
         assert CheckoutSolution().checkout("RQQQRRQFQQFQF") == 150 + 0 + 80 + 80 + 20
 
-        assert CheckoutSolution().checkout("KHHZHHKHJHH") == 65 + 50 + 150 + 60
+        assert CheckoutSolution().checkout("KHHZHHKHJHH") == 65 + 21 + 120 + 60
+
 
 
 
