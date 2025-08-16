@@ -19,7 +19,8 @@ class CheckoutSolution:
         "B": 30,
         "C": 20,
         "D": 15,
-        "E": 40
+        "E": 40,
+        "F": 10
     }
 
     offers = [
@@ -27,6 +28,7 @@ class CheckoutSolution:
         make_offer_dict("A", 3, "A", 3, 130),
         make_offer_dict("E", 2, "B", 1, 0),
         make_offer_dict("B", 2, "B", 2, 45),
+        make_offer_dict("F", 3, "F", 1, 0),
     ] 
 
     # skus = unicode string
@@ -89,6 +91,7 @@ class CheckoutSolution:
 
         return total
         
+
 
 
 
