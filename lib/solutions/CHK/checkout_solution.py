@@ -20,12 +20,13 @@ class CheckoutSolution:
         skus = skus.upper()
         item_freq = Counter(skus)
 
-        print((self.prices.keys()))
-
-        if any(x not in item_freq.keys() for x in self.prices.keys()):
+        if any(x not in self.prices.keys() for x in item_freq.keys()):
             return -1
 
-        # total = 
+        print(type(item_freq))
+        
+
+
 
 
 
