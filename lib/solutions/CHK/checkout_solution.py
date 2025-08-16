@@ -20,14 +20,12 @@ class CheckoutSolution:
         skus = skus.upper()
         item_freq = Counter(skus)
 
-        if any(list(item_freq.keys()) not in list(self.prices.keys())):
+        print((self.prices.keys()))
+
+        if any(x not in item_freq.keys() for x in self.prices.keys()):
             return -1
 
         # total = 
-
-
-
-
 
 
 

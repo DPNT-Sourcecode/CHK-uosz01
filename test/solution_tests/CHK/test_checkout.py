@@ -20,4 +20,3 @@ class TestCheckout():
         assert CheckoutSolution().checkout("AAE") == -1
 
 
-
