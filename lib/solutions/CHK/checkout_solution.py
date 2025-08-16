@@ -26,7 +26,7 @@ class CheckoutSolution:
         "H": 10,
         "I": 35,
         "J": 60,
-        "K": 80,
+        "K": 70,
         "L": 90,
         
         "M": 15,
@@ -36,7 +36,7 @@ class CheckoutSolution:
         "Q": 30,
         "R": 50,
 
-        "S": 30,
+        "S": 20,
         "T": 20,
         "U": 40,
         "V": 50,
@@ -134,6 +134,7 @@ class CheckoutSolution:
 
         return total
         
+
 
 
 

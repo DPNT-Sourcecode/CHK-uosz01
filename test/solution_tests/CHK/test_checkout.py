@@ -16,7 +16,7 @@ class TestCheckout():
         assert CheckoutSolution().checkout("H") == 10
         assert CheckoutSolution().checkout("I") == 35
         assert CheckoutSolution().checkout("J") == 60
-        assert CheckoutSolution().checkout("K") == 80
+        assert CheckoutSolution().checkout("K") == 70  ----------
         assert CheckoutSolution().checkout("L") == 90
 
         assert CheckoutSolution().checkout("M") == 15
@@ -26,15 +26,15 @@ class TestCheckout():
         assert CheckoutSolution().checkout("Q") == 30
         assert CheckoutSolution().checkout("R") == 50
 
-        assert CheckoutSolution().checkout("S") == 30
+        assert CheckoutSolution().checkout("S") == 20 ----------
         assert CheckoutSolution().checkout("T") == 20
         assert CheckoutSolution().checkout("U") == 40
         assert CheckoutSolution().checkout("V") == 50
         assert CheckoutSolution().checkout("W") == 20
-        assert CheckoutSolution().checkout("X") == 90
+        assert CheckoutSolution().checkout("X") == 17 -----------
 
-        assert CheckoutSolution().checkout("Y") == 10
-        assert CheckoutSolution().checkout("Z") == 50
+        assert CheckoutSolution().checkout("Y") == 20 --------
+        assert CheckoutSolution().checkout("Z") == 21 -------
 
 
     def test_checkout_special(self):
@@ -122,6 +122,7 @@ class TestCheckout():
         assert CheckoutSolution().checkout("RQQQRRQFQQFQF") == 150 + 0 + 80 + 80 + 20
 
         assert CheckoutSolution().checkout("KHHZHHKHJHH") == 65 + 50 + 150 + 60
+
 
 
 
