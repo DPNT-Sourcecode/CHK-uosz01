@@ -4,6 +4,7 @@ class TestCheckout():
 
     def test_checkout_individual(self):
 
+        assert CheckoutSolution().checkout("") == 0
         assert CheckoutSolution().checkout("A") == 50
         assert CheckoutSolution().checkout("B") == 30
         assert CheckoutSolution().checkout("C") == 20
@@ -18,5 +19,12 @@ class TestCheckout():
 
         assert CheckoutSolution().checkout("E") == -1
         assert CheckoutSolution().checkout("AAE") == -1
+
+    def test_checkout_combination(self):
+
+        assert CheckoutSolution.checkout("ABCD") == 50 + 30 + 20 + 15
+        assert CheckoutSolution.checkout("DCBA") == 50 + 30 + 20 + 15
+        assert CheckoutSolution.checkout("ABABACD") == 130 + 45 + 20 + 15
+
 
 
