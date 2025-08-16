@@ -51,7 +51,6 @@ class CheckoutSolution:
             offer_item = offer["offer_item"]
             num_offer_item = offer["num_offer_item"]
 
-        
             # What item does the offer reward, how many, and offer price
             reward_item = offer["reward_item"]
             num_reward_item = offer["num_reward_item"]
@@ -67,11 +66,12 @@ class CheckoutSolution:
                 # Calculate how many times the offer can be used
                 num_offers = offer_item_freq // num_offer_item
 
-                # Subtract the offer items off the main count
-                all_items_freq[item] = item_freq % offer_freq
+                # Subtract the offer reward items off the main count
+                all_items_freq[reward_item] -= num_offers * offer_freq
+                all_items_freq[reward_item] = item_freq % offer_freq
 
                 # Add offer price to the running total
-                total += num_offers * offer_val
+                total += num_offers * reward_offer_price
 
         # Multiply the frequency of each item by its price
         items_cost = {k: all_items_freq[k] * self.prices[k] for k in all_items_freq.keys()}
@@ -81,6 +81,7 @@ class CheckoutSolution:
 
         return total
         
+
 
 
 
