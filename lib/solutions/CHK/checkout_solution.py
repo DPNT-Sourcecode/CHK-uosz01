@@ -77,14 +77,17 @@ class CheckoutSolution:
 
     group_discount_items = ["Z", "S", "T", "Y", "X"]
     combos = list(combinations_with_replacement(group_discount_items, 3))
-    combo0 = combos[0]
+    combo0 = combos[5]
     combo_count = Counter(combo0)
     small_combo = list(combo_count.keys())
     small_combo_nums = list(combo_count.values())
     print(small_combo)
     print(small_combo_nums)
     for combo in combos:
-        offers.append(make_offer_dict(combo, [1, 1, 1], combo, [1, 1, 1], 45))
+        combo_count = Counter(combo)
+        combo_keys = list(combo_count.keys())
+        combo_values = list(combo_count.values())
+        offers.append(make_offer_dict(combo_keys, combo_values, combo_keys, combo_values, 45))
 
     # skus = unicode string
     def checkout(self, skus):
@@ -151,6 +154,7 @@ class CheckoutSolution:
 
         return total
         
+
 
 
 
