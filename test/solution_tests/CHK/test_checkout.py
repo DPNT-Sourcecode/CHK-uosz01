@@ -20,6 +20,8 @@ class TestCheckout():
 
         assert CheckoutSolution().checkout("BB") == 45
 
+        assert CheckoutSolution().checkout("EEB") == 80
+
     def test_checkout_invalid(self):
 
         assert CheckoutSolution().checkout("E") == -1
@@ -32,6 +34,12 @@ class TestCheckout():
         assert CheckoutSolution().checkout("ABCD") == 50 + 30 + 20 + 15
         assert CheckoutSolution().checkout("DCBA") == 50 + 30 + 20 + 15
         assert CheckoutSolution().checkout("ABABACD") == 130 + 45 + 20 + 15
+
+        assert CheckoutSolution().checkout("EEB") == 80
+
+        assert CheckoutSolution().checkout("EEBB") == 80 + 30
+        assert CheckoutSolution().checkout("EBB") == 40 + 45
+
 
 
 
