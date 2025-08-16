@@ -73,20 +73,6 @@ class CheckoutSolution:
 
         make_offer_dict(["V"], [3], ["V"], [3], 130),
         make_offer_dict(["V"], [2], ["V"], [2], 90),
-
-        make_offer_dict(["S", "T", "Z"], [1, 1, 1], ["S", "T", "Z"], [1, 1, 1], 45),
-        make_offer_dict(["S", "Y", "Z"], [1, 1, 1], ["S", "Y", "Z"], [1, 1, 1], 45),
-        make_offer_dict(["T", "Y", "Z"], [1, 1, 1], ["T", "Y", "Z"], [1, 1, 1], 45),
-
-        make_offer_dict(["S", "T", "Y"], [1, 1, 1], ["S", "T", "Y"], [1, 1, 1], 45),
-
-        make_offer_dict(["S", "X", "Z"], [1, 1, 1], ["S", "X", "Z"], [1, 1, 1], 45),
-        make_offer_dict(["T", "X", "Z"], [1, 1, 1], ["T", "X", "Z"], [1, 1, 1], 45),
-        make_offer_dict(["X", "Y", "Z"], [1, 1, 1], ["X", "Y", "Z"], [1, 1, 1], 45),
-
-        make_offer_dict(["S", "T", "X"], [1, 1, 1], ["S", "T", "X"], [1, 1, 1], 45),
-        make_offer_dict(["S", "X", "Y"], [1, 1, 1], ["S", "X", "Y"], [1, 1, 1], 45),
-        make_offer_dict(["T", "X", "Y"], [1, 1, 1], ["T", "X", "Y"], [1, 1, 1], 45),
     ] 
 
     group_discount_items = ["Z", "S", "T", "Y", "X"]
@@ -159,6 +145,7 @@ class CheckoutSolution:
 
         return total
         
+
 
 
 
