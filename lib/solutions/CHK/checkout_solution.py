@@ -17,15 +17,17 @@ class CheckoutSolution:
     # skus = unicode string
     def checkout(self, skus):
 
-        total = 0
+        if not(skus.isuppper()):
+            return -1
         
-        # Turn to upper case and count occurrence of each item
-        skus = skus.upper()
+        # Count occurrence of each item
         all_items_freq = Counter(skus)
 
         # Check for any invalid items and return -1
         if any(x not in self.prices.keys() for x in all_items_freq.keys()):
             return -1
+
+        total = 0
 
         # Loop over all offers available
         for item in self.offers.keys():
@@ -55,6 +57,7 @@ class CheckoutSolution:
 
         return total
         
+
 
 
 
