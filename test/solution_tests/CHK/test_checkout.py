@@ -22,9 +22,8 @@ class TestCheckout():
 
     def test_checkout_combination(self):
 
-        assert CheckoutSolution.checkout("ABCD") == 50 + 30 + 20 + 15
-        assert CheckoutSolution.checkout("DCBA") == 50 + 30 + 20 + 15
-        assert CheckoutSolution.checkout("ABABACD") == 130 + 45 + 20 + 15
-
+        assert CheckoutSolution().checkout("ABCD") == 50 + 30 + 20 + 15
+        assert CheckoutSolution().checkout("DCBA") == 50 + 30 + 20 + 15
+        assert CheckoutSolution().checkout("ABABACD") == 130 + 45 + 20 + 15
 
 
