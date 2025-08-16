@@ -23,8 +23,10 @@ class CheckoutSolution:
         if any(x not in self.prices.keys() for x in item_freq.keys()):
             return -1
 
-        print(type(item_freq))
+        for item in item_freq.keys():
+            
         
+
 
 
 
