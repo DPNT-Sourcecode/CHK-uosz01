@@ -1,3 +1,4 @@
+from collections import Counter
 
 class CheckoutSolution:
 
@@ -16,6 +17,15 @@ class CheckoutSolution:
     # skus = unicode string
     def checkout(self, skus):
         
+        skus = skus.upper()
+        item_freq = Counter(skus)
+
+        # total = 
+
+
+
+
+
 
 
 
