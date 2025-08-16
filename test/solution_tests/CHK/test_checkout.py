@@ -100,6 +100,12 @@ class TestCheckout():
         assert CheckoutSolution().checkout("ST") == 40
         assert CheckoutSolution().checkout("STZ") == 45
 
+        assert CheckoutSolution().checkout("STXYZ") == 45 + 37
+        assert CheckoutSolution().checkout("TXYZ") == 45 + 17
+        assert CheckoutSolution().checkout("SXYZ") == 45 + 17
+        assert CheckoutSolution().checkout("STYZ") == 45 + 20
+        assert CheckoutSolution().checkout("STXZ") == 45 + 17
+        assert CheckoutSolution().checkout("STXY") == 45 + 17
 
 
     def test_checkout_invalid(self):
@@ -131,6 +137,7 @@ class TestCheckout():
         assert CheckoutSolution().checkout("KHHZHHKHJHH") == 65 + 21 + 120 + 60
 
         assert CheckoutSolution().checkout("SATZ") == 45 + 50
+
 
 
 
