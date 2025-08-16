@@ -75,14 +75,11 @@ class CheckoutSolution:
         make_offer_dict(["V"], [2], ["V"], [2], 90),
     ] 
 
+    # Create all the valid combinations for the group discount
     group_discount_items = ["Z", "S", "T", "Y", "X"]
     combos = list(combinations_with_replacement(group_discount_items, 3))
-    combo0 = combos[5]
-    combo_count = Counter(combo0)
-    small_combo = list(combo_count.keys())
-    small_combo_nums = list(combo_count.values())
-    print(small_combo)
-    print(small_combo_nums)
+
+    # Add the combination to the list of offers
     for combo in combos:
         combo_count = Counter(combo)
         combo_keys = list(combo_count.keys())
@@ -154,6 +151,7 @@ class CheckoutSolution:
 
         return total
         
+
 
 
 
