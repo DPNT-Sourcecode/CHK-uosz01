@@ -100,7 +100,7 @@ class TestCheckout():
 
         assert CheckoutSolution().checkout("z") == -1
         assert CheckoutSolution().checkout("%") == -1
-        assert CheckoutSolution().checkout("AAG") == -1
+        assert CheckoutSolution().checkout("AAg") == -1
         assert CheckoutSolution().checkout("a") == -1
         assert CheckoutSolution().checkout("ABCa") == -1
 
@@ -120,6 +120,9 @@ class TestCheckout():
         assert CheckoutSolution().checkout("UUUVBVUUCVUV") == 120 + 0 + 80 + 130 + 50 + 30 + 20
 
         assert CheckoutSolution().checkout("RQQQRRQFQQFQF") == 150 + 0 + 80 + 80 + 20
+
+        assert CheckoutSolution().checkout("KHHZHHKHJHH") == 65 + 50 + 150 + 60
+
 
 
 

@@ -70,6 +70,8 @@ class CheckoutSolution:
 
         make_offer_dict("U", 4, "U", 1, 0),
 
+        make_offer_dict("V", 3, "V", 3, 130),
+        make_offer_dict("V", 2, "V", 2, 90),
     ] 
 
     # skus = unicode string
@@ -132,6 +134,7 @@ class CheckoutSolution:
 
         return total
         
+
 
 
 
