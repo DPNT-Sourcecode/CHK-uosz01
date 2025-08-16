@@ -50,9 +50,26 @@ class CheckoutSolution:
     offers = [
         make_offer_dict("A", 5, "A", 5, 200),
         make_offer_dict("A", 3, "A", 3, 130),
+
         make_offer_dict("E", 2, "B", 1, 0),
         make_offer_dict("B", 2, "B", 2, 45),
+
         make_offer_dict("F", 3, "F", 1, 0),
+
+        make_offer_dict("H", 10, "H", 10, 80),
+        make_offer_dict("H", 5, "H", 5, 45),
+
+        make_offer_dict("K", 2, "K", 2, 150),
+
+        make_offer_dict("N", 3, "M", 1, 0),
+
+        make_offer_dict("P", 5, "P", 5, 200),
+
+        make_offer_dict("R", 3, "Q", 1, 0),
+        make_offer_dict("Q", 3, "Q", 3, 80),
+
+        make_offer_dict("U", 4, "U", 1, 0),
+
     ] 
 
     # skus = unicode string
@@ -115,6 +132,7 @@ class CheckoutSolution:
 
         return total
         
+
 
 
 
