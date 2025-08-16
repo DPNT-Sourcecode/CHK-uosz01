@@ -83,11 +83,16 @@ class TestCheckout():
         assert CheckoutSolution().checkout("UU") == 80
         assert CheckoutSolution().checkout("UUU") == 120
         assert CheckoutSolution().checkout("UUUU") == 120 + 0
-        assert CheckoutSolution().checkout("UUUUU") == 160 + 0
-        assert CheckoutSolution().checkout("UUUUUU") == 40
+        assert CheckoutSolution().checkout("UUUUU") == 120 + 0 + 40
+        assert CheckoutSolution().checkout("UUUUUU") == 120 + 0 + 80
+        assert CheckoutSolution().checkout("UUUUUUU") == 120 + 0 + 120
+        assert CheckoutSolution().checkout("UUUUUUUU") == 120 + 0 + 120 + 0
 
-
-
+        assert CheckoutSolution().checkout("VV") == 90
+        assert CheckoutSolution().checkout("VVV") == 130
+        assert CheckoutSolution().checkout("VVVV") == 130 + 50
+        assert CheckoutSolution().checkout("VVVVV") == 130 + 90
+        assert CheckoutSolution().checkout("VVVVVV") == 130 + 130
 
 
 
@@ -111,6 +116,11 @@ class TestCheckout():
 
         assert CheckoutSolution().checkout("FFAFBF") == 30 + 50 + 30
         assert CheckoutSolution().checkout("FFAFBFEEB") == 30 + 50 + 30 + 80
+
+        assert CheckoutSolution().checkout("UUUUUU") == 120 + 0 + 80 assert CheckoutSolution().checkout("VVVV") == 130 + 50
+
+        assert CheckoutSolution().checkout("RQQQRRQFQQFQF") == 150 + 0 + 80 + 80 + 20
+
 
 
 
