@@ -67,8 +67,10 @@ class CheckoutSolution:
                 num_offers = offer_item_freq // num_offer_item
 
                 # Subtract the offer reward items off the main count
-                all_items_freq[reward_item] -= num_offers * offer_freq
-                all_items_freq[reward_item] = item_freq % offer_freq
+                all_items_freq[reward_item] -= num_offers * num_reward_item
+
+                # Ensure it doesn't drop below 0
+                all_items_freq[reward_item] = max(all_items_freq[reward_item], 0)
 
                 # Add offer price to the running total
                 total += num_offers * reward_offer_price
@@ -81,6 +83,7 @@ class CheckoutSolution:
 
         return total
         
+
 
 
 
