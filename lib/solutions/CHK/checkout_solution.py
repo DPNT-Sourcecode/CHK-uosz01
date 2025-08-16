@@ -102,8 +102,8 @@ class CheckoutSolution:
             reward_offer_price = offer["reward_offer_price"]
 
             # How many of the offer items and reward items do we have
-            offer_item_freq = all_items_freq[offer_item]
-            reward_item_freq = all_items_freq[reward_item]
+            offer_item_freq = [all_items_freq[item] for item in offer_item]
+            reward_item_freq = [all_items_freq[item] for item in reward_item]
 
             # If there are enough items to apply an offer
             if offer_item_freq >= num_offer_item:
@@ -134,6 +134,7 @@ class CheckoutSolution:
 
         return total
         
+
 
 
 
