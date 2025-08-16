@@ -17,7 +17,7 @@ class CheckoutSolution:
     # skus = unicode string
     def checkout(self, skus):
 
-        if not(skus.isuppper()):
+        if not(skus.isupper()) and skus != "":
             return -1
         
         # Count occurrence of each item
@@ -57,6 +57,7 @@ class CheckoutSolution:
 
         return total
         
+
 
 
 
