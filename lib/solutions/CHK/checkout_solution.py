@@ -45,7 +45,7 @@ class CheckoutSolution:
         total = 0
 
         # Loop over all offers available
-        for item in self.offers.keys():
+        for offer in self.offers:
 
             # Variables for readability
             item_freq = all_items_freq[item]
@@ -72,6 +72,7 @@ class CheckoutSolution:
 
         return total
         
+
 
 
 
