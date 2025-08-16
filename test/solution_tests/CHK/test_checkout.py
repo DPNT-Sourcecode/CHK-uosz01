@@ -63,6 +63,20 @@ class TestCheckout():
 
         assert CheckoutSolution().checkout("KK") == 150
 
+        assert CheckoutSolution().checkout("NNN") == 120
+        assert CheckoutSolution().checkout("NNNM") == 120 + 0
+        assert CheckoutSolution().checkout("NNNMM") == 120 + 15
+
+        assert CheckoutSolution().checkout("PPPP") == 200
+        assert CheckoutSolution().checkout("PPPPP") == 200
+
+        assert CheckoutSolution().checkout("QQ") == 60
+        assert CheckoutSolution().checkout("QQQ") == 80
+
+        assert CheckoutSolution().checkout("RR") == 100
+        assert CheckoutSolution().checkout("RRR") == 150
+        assert CheckoutSolution().checkout("RRRQ") == 150
+
 
 
 
@@ -87,6 +101,7 @@ class TestCheckout():
 
         assert CheckoutSolution().checkout("FFAFBF") == 30 + 50 + 30
         assert CheckoutSolution().checkout("FFAFBFEEB") == 30 + 50 + 30 + 80
+
 
 
 
