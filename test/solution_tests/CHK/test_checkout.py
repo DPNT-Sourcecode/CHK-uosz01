@@ -24,8 +24,9 @@ class TestCheckout():
 
     def test_checkout_invalid(self):
 
-        assert CheckoutSolution().checkout("E") == -1
-        assert CheckoutSolution().checkout("AAE") == -1
+        assert CheckoutSolution().checkout("H") == -1
+        assert CheckoutSolution().checkout("%") == -1
+        assert CheckoutSolution().checkout("AAG") == -1
         assert CheckoutSolution().checkout("a") == -1
         assert CheckoutSolution().checkout("ABCa") == -1
 
@@ -39,5 +40,6 @@ class TestCheckout():
 
         assert CheckoutSolution().checkout("EEBB") == 80 + 30
         assert CheckoutSolution().checkout("EBB") == 40 + 45
+
 
 
