@@ -64,7 +64,7 @@ class CheckoutSolution:
             if offer_item_freq >= num_offer_item:
 
                 # Calculate how many times the offer can be used
-                num_offers = offer_item_freq // num_offer_item
+                num_offers = reward_item_freq // num_reward_item
 
                 # Subtract the offer reward items off the main count
                 all_items_freq[reward_item] -= num_offers * num_reward_item
@@ -83,6 +83,7 @@ class CheckoutSolution:
 
         return total
         
+
 
 
 
