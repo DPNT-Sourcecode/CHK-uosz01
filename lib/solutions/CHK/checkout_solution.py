@@ -106,13 +106,13 @@ class CheckoutSolution:
             reward_item_freq = [all_items_freq[item] for item in reward_item]
 
             # If there are enough items to apply an offer
-            if offer_item_freq >= num_offer_item:
+            if all([x >= y for x,y in zip(offer_item_freq, num_offer_item)]):
 
                 # Calculate how many offers are available
-                num_offers_available = offer_item_freq // num_offer_item
+                num_offers_available = min(x // y for x,y in zip(offer_item_freq, num_offer_item))
 
                 # Calculate how many times the offer can be used on reward item
-                num_offers_possible = reward_item_freq // num_reward_item
+                num_offers_possible = min(x // y for x,y in zip(reward_item_freq, num_reward_item))
 
                 # Find the number of offers that can be applied to the total
                 num_offers_used = min(num_offers_available, num_offers_possible)
@@ -134,6 +134,7 @@ class CheckoutSolution:
 
         return total
         
+
 
 
 
