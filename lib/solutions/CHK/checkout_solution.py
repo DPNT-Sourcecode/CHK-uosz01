@@ -24,8 +24,15 @@ class CheckoutSolution:
             return -1
 
         for item in item_freq.keys():
-            
+            pass
+
+
+        items_cost = {k: item_freq[k] * self.prices[k] for k in item_freq.keys()}
+        total = sum(items_cost.values())
+
+        return total
         
+
 
 
 
