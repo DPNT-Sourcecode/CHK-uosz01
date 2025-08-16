@@ -16,6 +16,8 @@ class CheckoutSolution:
 
     # skus = unicode string
     def checkout(self, skus):
+
+        total = 0
         
         # Turn to upper case and count occurrence of each item
         skus = skus.upper()
@@ -31,19 +33,29 @@ class CheckoutSolution:
             # Variables for readability
             item_freq = all_items_freq[item]
             offer_freq = (self.offers[item])[0]
+            offer_val = (self.offers[item])[1]
 
             # If there are enough items to apply an offer
             if item_freq >= offer_freq:
 
+                # Calculate how many times the offer can be used
                 num_offers = item_freq // offer_freq
+
+                # Subtract the offer items off the main count
                 all_items_freq[item] = item_freq % offer_freq
 
+                # Add offer price to the running total
+                total += num_offers * offer_val
 
+        # Multiply the frequency of each item by its price
         items_cost = {k: all_items_freq[k] * self.prices[k] for k in all_items_freq.keys()}
-        total = sum(items_cost.values())
+
+        # Add to total
+        total += sum(items_cost.values())
 
         return total
         
+
 
 
 
