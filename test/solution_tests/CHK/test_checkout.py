@@ -97,7 +97,9 @@ class TestCheckout():
 
     def test_checkout_group_offer(self):
 
-        assert CheckoutSolution().checkout("STX") == 57
+        assert CheckoutSolution().checkout("ST") == 40
+        assert CheckoutSolution().checkout("STZ") == 45
+
 
 
     def test_checkout_invalid(self):
@@ -127,6 +129,10 @@ class TestCheckout():
         assert CheckoutSolution().checkout("RQQQRRQFQQFQF") == 150 + 0 + 80 + 80 + 20
 
         assert CheckoutSolution().checkout("KHHZHHKHJHH") == 65 + 21 + 120 + 60
+
+        assert CheckoutSolution().checkout("SATZ") == 45 + 50
+
+
 
 
 
