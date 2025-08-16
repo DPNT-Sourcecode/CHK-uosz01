@@ -9,6 +9,9 @@ class TestCheckout():
         assert CheckoutSolution().checkout("B") == 30
         assert CheckoutSolution().checkout("C") == 20
         assert CheckoutSolution().checkout("D") == 15
+        assert CheckoutSolution().checkout("E") == 40
+        assert CheckoutSolution().checkout("F") == 10
+
 
     def test_checkout_special(self):
 
@@ -19,8 +22,11 @@ class TestCheckout():
         assert CheckoutSolution().checkout("AAAAAAAA") == 330
 
         assert CheckoutSolution().checkout("BB") == 45
-
         assert CheckoutSolution().checkout("EEB") == 80
+
+        assert CheckoutSolution().checkout("FF") == 20
+        assert CheckoutSolution().checkout("FFF") == 20
+
 
     def test_checkout_invalid(self):
 
@@ -37,8 +43,11 @@ class TestCheckout():
         assert CheckoutSolution().checkout("ABABACD") == 130 + 45 + 20 + 15
 
         assert CheckoutSolution().checkout("EEB") == 80
-
         assert CheckoutSolution().checkout("EEBB") == 80 + 30
         assert CheckoutSolution().checkout("EBB") == 40 + 45
+
+        assert CheckoutSolution().checkout("FFFF") == 30
+
+
 
 
