@@ -1,5 +1,17 @@
 from collections import Counter
 
+def make_offer_dictionary(offer_item, num_offer_item, reward_item, num_reward_item, reward_offer_price):
+
+    offer_dict = {
+        "offer_item": offer_item,
+        "num_offer_item": num_offer_item,
+        "reward_item": reward_item,
+        "num_reward_item": num_reward_item,
+        "reward_offer_price": reward_offer_price
+    }
+
+    return offer_dict
+
 class CheckoutSolution:
 
     prices = {
@@ -10,9 +22,11 @@ class CheckoutSolution:
         "E": 40
     }
 
+    # Structure: "ITEM_IN_OFFER": [NUM_OF_ITEMS_FOR_OFFER, ()]
     offers = {
         "A": (5, 200),
         "A": (3, 130),
+        "E": (2, )
         "B": (2, 45)
     }    
 
@@ -59,10 +73,6 @@ class CheckoutSolution:
 
         return total
         
-
-
-
-
 
 
 

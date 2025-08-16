@@ -41,6 +41,3 @@ class TestCheckout():
         assert CheckoutSolution().checkout("EBB") == 40 + 45
 
 
-
-
-
